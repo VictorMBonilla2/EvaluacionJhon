@@ -1,7 +1,7 @@
 //Ejercicio1
 
 export function validarTarjeta(numeroTarjeta) {
-  const AmericanExpress = /^3[47][0-9]{13}$/;
+  const AmericanExpress = /^3[4-7][0-9]{13}$/;
   const DinersClub = /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/;
   const Discover = /^6011[0-9]{12}$/;
   const Mastercard = /^5[1-5][0-9]{14}$/;
