@@ -6,7 +6,7 @@ export function validarTarjeta(numeroTarjeta) {
   const Discover = /^6011[0-9]{12}$/;
   const Mastercard = /^5[1-5][0-9]{14}$/;
   const Visa = /^4[0-9]{15}$/;
-  
+
   if (AmericanExpress.test(numeroTarjeta)) {
     return "American Express";
   } else if (DinersClub.test(numeroTarjeta)) {
@@ -88,25 +88,23 @@ export function promedioPrimos(numeros) {
 
     if (esPrimo) {
       sumatorio.push(numero);
-      suma+=numero
+      suma += numero;
     }
-
-    
   });
 
-  return suma/sumatorio.length;
+  return suma / sumatorio.length;
 }
 
 export function promedioPares(numeros) {
   let sumatorio = 0;
-  let cantidad=[];
+  let cantidad = [];
   numeros.forEach((numero) => {
     if (numero % 2 === 0) {
-      sumatorio +=numero;
+      sumatorio += numero;
       cantidad.push(numero);
     }
   });
-  
+
   let promedio = sumatorio / cantidad.length;
 
   return promedio;
@@ -114,12 +112,12 @@ export function promedioPares(numeros) {
 
 //Ejercicio3
 
-export const ordenarNumeros = function(...numeros) {
+export const ordenarNumeros = function (...numeros) {
   return numeros.sort((a, b) => b - a);
 };
 //Ejercicio4
 
-export const ordenarPalabras= function(...palabras) {
+export const ordenarPalabras = function (...palabras) {
   let palabraMasLarga = "";
   for (let palabra of palabras) {
     if (palabra.length > palabraMasLarga.length) {
@@ -127,26 +125,22 @@ export const ordenarPalabras= function(...palabras) {
     }
   }
   return palabraMasLarga;
-}
+};
 
 //Ejercicio5
 export class Calculadora {
-
   suma(num1, num2) {
-
-      return num1 + num2;
+    return num1 + num2;
   }
 
   // Método para restar dos números
   resta(num1, num2) {
-
-      return num1 - num2;
+    return num1 - num2;
   }
 
   // Método para multiplicar dos números
   multiplicacion(num1, num2) {
-
-      return num1 * num2;
+    return num1 * num2;
   }
 
   // Método para dividir dos números
@@ -159,5 +153,3 @@ export class Calculadora {
     return resut;
   }
 }
-
-
